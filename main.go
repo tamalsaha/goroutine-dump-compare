@@ -14,7 +14,7 @@ var (
 	f2 = "/home/tamal/Downloads/goroutine2.txt"
 )
 
-type Diff struct{
+type Diff struct {
 	A string
 	B string
 }
