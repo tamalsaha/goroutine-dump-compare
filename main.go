@@ -29,14 +29,22 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	cmp := map[int]Diff{}
+	cmp := map[int]*Diff{}
 	for k, v := range l1 {
 		d := cmp[k]
+		if d == nil {
+			d = new(Diff)
+		}
 		d.A = v
+		cmp[k] = d
 	}
 	for k, v := range l2 {
 		d := cmp[k]
+		if d == nil {
+			d = new(Diff)
+		}
 		d.B = v
+		cmp[k] = d
 	}
 
 	for k, d := range cmp {
