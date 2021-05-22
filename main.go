@@ -54,6 +54,14 @@ func main() {
 			fmt.Println("--------------------------------------------------------")
 		}
 	}
+	fmt.Println("============================================================")
+	for k, d := range cmp {
+		if d.A != "" && d.B == "" {
+			fmt.Println("Goroutine", k)
+			fmt.Println(d.A)
+			fmt.Println("--------------------------------------------------------")
+		}
+	}
 }
 
 // https://www.geeksforgeeks.org/how-to-read-a-file-line-by-line-to-string-in-golang/
